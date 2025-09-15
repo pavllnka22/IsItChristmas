@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<style>
+  html, body {
+    height: 100%; /* Ensure html and body take full height */
+    margin: 0;
+  }
+
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+}
+.wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+.content {
+    padding-bottom: 60px; /* висота футера */
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+</style>
+    <meta charset="UTF-8">
+    <title>{% block title %}Christmas App{% endblock %}</title>
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+ <div class="wrapper">
+        <main class="content">
+<header>
+    <nav class="topnav">
+        <a href="{% url 'is_christmas' %}">MAIN</a>
+        <a href="{% url 'santa_page' %}">Secret Santa Page</a>
+    </nav>
+</header>
+
+{% block content %}
+
+<hr>
+ </main>
+
+{% endblock %}
+
+<footer >
+    <p>© 2025 Secret Santa</p>
+</footer>
+ </div>
+</body>
+</html>

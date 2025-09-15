@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+    <title>{% block title %}Pairs{% endblock %}</title>
+    {% block extra_css %}<link rel="stylesheet" href="{% static 'SecretSanta/stylesanta.css' %}">{% endblock %}
+
+ {% block content %}
+
+   <h2></h2>
+
+{% if pairs %}
+    <h3>Secret Santa Pairs:</h3>
+    <ul>
+    {% for giver, receiver in pairs.items %}
+        <li>{{ giver }} → {{ receiver }}</li>
+    {% endfor %}
+    </ul>
+
+     {% endif %}
+     {% if not pairs %}
+          <h2>At least 2 people needed</h2>
+     {% endif %}
+{% endblock %}

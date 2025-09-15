@@ -1,0 +1,40 @@
+
+body {
+    margin: 50px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.2em;
+    line-height: 1.4;
+    color: #000;
+    background-color: aliceblue;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: mediumslateblue;
+}
+
+.topnav a {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.topnav a.active {
+  background-color: plum;
+  color: white;
+}
+.topnav a:hover {
+  background-color: pink ;
+  color: black ;
+}

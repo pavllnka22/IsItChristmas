@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+    <title>{% block title %}Is It Christmas Today?{% endblock %}</title>
+    {% block extra_css %}<link rel="stylesheet" href="{% static 'is_christmas/style.css' %}">{% endblock %}
+
+ {% block content %}
+     <h1 style="color: black;">Is it Christmas today?</h1>
+<h2 class="big {% if result %}yes{% else %}no{% endif %}">
+    {% if result %}Yes!{% else%} No:( {% endif %}
+</h2>
+     <p>Do you want to take part in a Secret Santa activity?</p>
+     <form action="{% url 'santa_page' %}" method="get">
+         <button type="submit" class="button">SECRET SANTA</button>
+     </form>
+{% endblock %}
